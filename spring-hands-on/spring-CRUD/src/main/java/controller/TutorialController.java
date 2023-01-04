@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.response.DeleteResponse;
-import com.example.response.DeleteTutorialRequest;
 import com.example.response.DeleteTutorialResponse;
 import com.example.response.SaveTutorialRequest;
 import com.example.response.SaveTutorialResponse;
@@ -53,6 +51,21 @@ public class TutorialController {
 //		return "tutorials";
 //	}
 
+//	GetMapping("/tutorials")
+//	@ResponseBody
+//	public TutorialResponse getAllTutorials(@RequestBody String keyword) {
+//			TutorialResponse response;
+//			List<Tutorial> tutorials = new ArrayList<>();
+//			try {
+//				
+//					
+//				}catch{
+//					
+//				}
+//			return tutorials;
+//	
+//	}
+
 	@GetMapping("/tutorials")
 	public TutorialsResponse getAll(@Param("keyword") String keyword) {
 		try {
@@ -80,6 +93,7 @@ public class TutorialController {
 	// add the list of tutorial response to final response
 
 	// Output : list of tutorials to display
+
 	private TutorialsResponse createResponseForTutorials(List<Tutorial> tutorials) {
 		TutorialsResponse tutorialsResponse = new TutorialsResponse();
 
