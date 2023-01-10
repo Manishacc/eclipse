@@ -13,5 +13,33 @@ public class Product {
 	}
 	
 	
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public long getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(long price) {
+		this.price = price;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	String getName() {
+		return this.name;
+	}
 
 }
