@@ -1,0 +1,95 @@
+saveTutorial
+
+pupose: gets tutorial details from customer and sends "successfully saved" message
+
+request:
+{
+  "tutorial": {
+    "id": 123,
+    "title": "java",
+    "description": "java 8 streams course",
+    "level": 1
+  }
+}
+
+response:
+{
+  "message": "The Tutorial has been saved successfully!"
+}
+
+
+editTutorial
+
+purpose: gets tutorial id from customer whose details are to be edited, saves changes and sends edited response
+request:{
+
+{
+  "tutorial": {
+    "id": 123
+  }
+}
+
+response:
+{
+  "tutorial": {
+    "id": 123,
+    "title": "java",
+    "description": "java 8 streams course",
+    "level": 1
+  }
+}
+
+deleteTutorial
+purpose: gets tutorial id from customer which is to be deleted, deletes and sends delete message
+request:{
+
+{
+  "tutorial": {
+    "id": 123
+  }
+}
+
+response:
+{
+  "message": "The Tutorial with id 123 has been deleted successfully!"
+}
+
+updateTutorialPublishedStatus
+
+purpose: gets tutorial id,status from customer which is to be updated, sends update success message
+request:{
+
+{
+  "tutorial": {
+    "id": 123,
+    "status": "Published"
+
+  }
+}
+
+reponse:
+{
+ "message":"The Tutorial id 123 has been published" 
+}
+
+addTuorial
+
+purpose: gets tutorial details from customer and adds it to tutorial list
+
+request:{
+  "tutorial": {
+    "id": 123,
+    "title": "java",
+    "description": "java 8 streams course",
+    "level": 1
+  }
+}
+ 
+response:
+{
+    "TutorialResponse":{
+        "id": 234,
+        "title": "python",
+        "description": "advance python course"
+    }
+}
